@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+  width: 100%;
+}
+.container {
+  width: 75vw;
+  padding: 2rem 1rem;
+  margin: 0 auto;
+  /* background-color: aqua; */
+}
+a {
+  text-decoration: none;
+}
+.headerContainer {
+  /* border: 2px solid black; */
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.headerTitle {
+  margin-bottom: 1.4rem;
+}
+.headerDesc {
+  /* border: 2px solid black; */
+  text-align: center;
+  color: rgb(106, 106, 106);
+  max-width: 568px;
+}
+.mainContainer {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+@media (min-width: 754px) {
+  .mainContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1080px) {
+  .mainContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1340px) {
+  .mainContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(127, 124, 124);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.cardImgContainer {
+  position: relative;
+  overflow: hidden;
+  height: 7rem;
+}
+@media (min-width: 768px) {
+  .cardImgContainer {
+    height: 12rem;
+  }
+}
+.cardImage {
+  object-fit: cover;
+  /* position: center; */
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.cardContainer:hover .cardImage {
+  transform: scale(1.1);
+  transition-duration: 200ms;
+}
+.cardTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(30, 26, 26);
+  margin: 0.3rem 0;
+  line-height: 1.5rem;
+}
+.cardTitleContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+.cardTitleAnchor:hover .cardTitle {
+  color: rgb(52, 52, 214);
+}
+.cardDesc {
+  color: rgb(55, 53, 53);
+  font-size: 1 rem;
+  /* margin-bottom: 20px; */
+}
+.cardFooterContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.authorContainer {
+  display: flex;
+}
+.authorAvatarContainer {
+  height: 2.5rem;
+  width: 2.5rem;
+  overflow: hidden;
+  border: 1px solid rgb(116, 112, 112);
+  border-radius: 50%;
+  background-color: rgba(128, 128, 128, 0.43);
+  margin-right: 5px;
+}
+.authorInfoContainer {
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+}
+.authorName {
+  color: rgb(98, 98, 144);
+  /* font-size: rem; */
+}
+.authorDate {
+  color: rgb(172, 172, 172);
+  /* font-size: 0.5rem; */
+}
+.cardTagContainer {
+  /* height: 1.5rem; */
+  font-size: 0.79rem;
+  border: 1px solid black;
+  border-radius: 4px;
+  line-height: 1.3rem;
+  padding: 0.25rem 0.25rem;
+  color: grey;
+}
